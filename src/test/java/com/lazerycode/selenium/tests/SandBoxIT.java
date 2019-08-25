@@ -295,6 +295,7 @@ public class SandBoxIT extends DriverBase {
             testCasePage.deleteEdited("//input[@name='title']");
             testCasePage.deleteEdited("//textarea[@name='description']");
             testCasePage.deleteEdited("//input[@name='expected_result']");
+            testCasePage.deleteSteps();
             
 
             // Submit
