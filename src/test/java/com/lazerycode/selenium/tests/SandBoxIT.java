@@ -101,7 +101,7 @@ public class SandBoxIT extends DriverBase {
 
         // case step 5
         testCasePage.addStep();
-        testCasePage.InsertStep_4("Click Submit");
+        testCasePage.InsertStep_5("Click Submit");
 
         testCasePage.submit();
     }
