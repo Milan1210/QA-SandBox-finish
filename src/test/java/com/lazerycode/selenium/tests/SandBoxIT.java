@@ -279,4 +279,26 @@ public class SandBoxIT extends DriverBase {
             testCasePage.submit();
         }
     }
+    
+    @Test(priority = 9)
+    public void deleteEdit() throws Exception {
+        wait.until(ExpectedConditions.urlToBe(siteUrl + "use-cases"));
+
+        UseCasesPage useCasesPage = new UseCasesPage();
+        int casesCount = useCasesPage.countCases();
+
+        TestCasePage testCasePage = new TestCasePage();
+        for (int i = 1; i <= casesCount; i++) {
+            useCasesPage.clickUseCase(i);
+            wait.until(ExpectedConditions.urlContains(siteUrl + "use-cases/"));
+
+            testCasePage.deleteEdited("//input[@name='title']");
+            testCasePage.deleteEdited("//textarea[@name='description']");
+            testCasePage.deleteEdited("//input[@name='expected_result']");
+            
+
+            // Submit
+            testCasePage.submit();
+        }
+    }
 }
