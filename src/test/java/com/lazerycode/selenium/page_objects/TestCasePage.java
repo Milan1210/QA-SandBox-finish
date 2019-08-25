@@ -118,6 +118,14 @@ public class TestCasePage extends BasePage {
         title.sendKeys(Keys.CONTROL,Keys.SHIFT,Keys.ARROW_LEFT);
         title.sendKeys(Keys.BACK_SPACE);
     }
+    
+    public void deleteSteps() {
+        List<WebElement> caseSteps = driver.findElements(By.xpath(caseStepsXpath));
+        for (WebElement caseStep : caseSteps) {
+            caseStep.sendKeys(Keys.CONTROL,Keys.SHIFT,Keys.ARROW_LEFT);
+            caseStep.sendKeys(Keys.BACK_SPACE);
+        }
+    }
 
     
 }
