@@ -111,6 +111,13 @@ public class TestCasePage extends BasePage {
 
         return driver.findElements(By.xpath(caseStepsXpath)).size();
     }
+    
+    public void deleteEdited(String xpath) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+        WebElement title = driver.findElement(By.xpath(xpath));
+        title.sendKeys(Keys.CONTROL,Keys.SHIFT,Keys.ARROW_LEFT);
+        title.sendKeys(Keys.BACK_SPACE);
+    }
 
     
 }
