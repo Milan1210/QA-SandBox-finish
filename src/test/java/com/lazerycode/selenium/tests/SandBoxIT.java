@@ -75,14 +75,14 @@ public class SandBoxIT extends DriverBase {
         testCasePage.clickCreateUseCase();
 
         // Add title of UseCase
-        testCasePage.InsertTitle("QA Sandbox login test with valid email address and password");
+        testCasePage.InsertTitle("QA Sandbox login test with valid email address and valid password");
 
         // Add Description of UseCase
         testCasePage
-                .InsertDescription("Testing login functionality of QA Sandbox with valid email address and password");
+                .InsertDescription("Testing login functionality of QA Sandbox with valid email address and valid password");
 
         // Add Expected of UseCase
-        testCasePage.InsertExpected("User is loged in QA Sandbox");
+        testCasePage.InsertExpected("User is loged in QA Sandbox. We will see Dashboard page");
 
         // case step 1
         testCasePage.InsertStep_1("Open https://qa-sandbox.apps.htec.rs on web browser");
@@ -97,7 +97,7 @@ public class SandBoxIT extends DriverBase {
 
         // case step 4
         testCasePage.addStep();
-        testCasePage.InsertStep_4("Enter correct password");
+        testCasePage.InsertStep_4("Enter valid password");
 
         // case step 5
         testCasePage.addStep();
@@ -121,7 +121,7 @@ public class SandBoxIT extends DriverBase {
                 "Testing login functionality of QA Sandbox with invalid email address and valid password");
 
         // Add Expected of UseCase
-        testCasePage.InsertExpected("User not found");
+        testCasePage.InsertExpected("User is not loged in, message: 'User not found' is shown");
 
         // case step 1
         testCasePage.InsertStep_1("Open https://qa-sandbox.apps.htec.rs on web browser");
@@ -136,7 +136,7 @@ public class SandBoxIT extends DriverBase {
 
         // case step 4
         testCasePage.addStep();
-        testCasePage.InsertStep_4("Enter correct password");
+        testCasePage.InsertStep_4("Enter valid password");
 
         // case step 5
         testCasePage.addStep();
@@ -162,7 +162,7 @@ public class SandBoxIT extends DriverBase {
                 "Testing login functionality of QA Sandbox with valid email address and invalid password");
 
         // Add Expected of UseCase
-        testCasePage.InsertExpected("Password incorrect");
+        testCasePage.InsertExpected("User is not loged in, message: 'Password incorrect' is shown");
 
         // case step 1
         testCasePage.InsertStep_1("Open https://qa-sandbox.apps.htec.rs on web browser");
@@ -195,14 +195,14 @@ public class SandBoxIT extends DriverBase {
         // Click on Button Create UseCase
         testCasePage.clickCreateUseCase();
         // Add title of UseCase
-        testCasePage.InsertTitle("QA Sandbox login test without email address and invalid password");
+        testCasePage.InsertTitle("QA Sandbox login test without enetring email address and valid password");
 
         // Add Description of UseCase
         testCasePage.InsertDescription(
-                "Testing login functionality of QA Sandbox without email address and invalid password");
+                "Testing login functionality of QA Sandbox without enetring email address (leave email filed empty) and valid password");
 
         // Add Expected of UseCase
-        testCasePage.InsertExpected("Email filed is required");
+        testCasePage.InsertExpected("USer is not logged in, message: 'Email filed is required' is shown");
 
         // case step 1
         testCasePage.InsertStep_1("Open https://qa-sandbox.apps.htec.rs on web browser");
@@ -234,10 +234,10 @@ public class SandBoxIT extends DriverBase {
         testCasePage.InsertTitle("QA Sandbox login test without password");
 
         // Add Description of UseCase
-        testCasePage.InsertDescription("Testing login functionality of QA Sandbox without password");
+        testCasePage.InsertDescription("Testing login functionality of QA Sandbox with valid email address and without entering password(leave password filed empty)");
 
         // Add Expected of UseCase
-        testCasePage.InsertExpected("Password filed is required");
+        testCasePage.InsertExpected("User is not logged in, message: 'Password filed is required' is shown.");
 
         // case step 1
         testCasePage.InsertStep_1("Open https://qa-sandbox.apps.htec.rs on web browser");
