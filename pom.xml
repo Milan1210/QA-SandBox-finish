@@ -187,6 +187,7 @@
                                 <exclude>SandBoxIT.java</exclude>
                                 <!-- <exclude>AlertIT.java</exclude> -->
                                 <!-- <exclude>YahooIT.java</exclude> -->
+                                <!-- <exclude>YahooIT.java</exclude> -->
                             </includes>
                             <excludes>
                                 <!-- <exclude>GoogleExampleIT.java</exclude> -->
