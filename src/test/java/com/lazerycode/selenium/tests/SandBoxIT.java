@@ -17,7 +17,7 @@ public class SandBoxIT extends DriverBase {
     private WebDriver driver;
     private String siteUrl = System.getProperty("site.url");
     private WebDriverWait wait;
-
+    //Open browsersss
     @Test(priority = 1)
     public void login() throws Exception {
         driver = getDriver();
